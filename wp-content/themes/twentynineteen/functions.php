@@ -337,3 +337,27 @@ require get_template_directory() . '/inc/customizer.php';
  * Block Patterns.
  */
 require get_template_directory() . '/inc/block-patterns.php';
+
+function my_awesome_func( WP_REST_Request $request ){
+
+	$random = rand(1,10);
+
+	$w1 = new EvTimer(5, 0, function () {
+		$random = rand(1,10);
+	});
+
+	$return = array(
+		'author' => (int) $request['id'],
+	);
+
+	wp_send_json( $return );
+}
+
+add_action( 'rest_api_init', function(){
+
+	myapi_pick_ceil( 'http://localhost:3000/myapi/#/game', [
+		'methods'  => 'GET',
+		'callback' => 'my_awesome_func',
+	] );
+
+} );
