@@ -338,16 +338,24 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/block-patterns.php';
 
-function my_awesome_func( WP_REST_Request $request ){
+function myapi_pick_ceil( WP_REST_Request $request ){
 
 	$random = rand(1,10);
 
-	$w1 = new EvTimer(5, 0, function () {
-		$random = rand(1,10);
-	});
+	if ($random >= 4 && $random < 8) {
+		$result = "Вы выиграли!";
+	}
+
+	else if ($random >= 8 && $random < 10) {
+		$result = "Вы получили дополнительную попытку!";
+	}
+
+	else {
+		$result = "Вы проиграли.";
+	}
 
 	$return = array(
-		'author' => (int) $request['id'],
+		'result'   => '$result',
 	);
 
 	wp_send_json( $return );
@@ -355,9 +363,9 @@ function my_awesome_func( WP_REST_Request $request ){
 
 add_action( 'rest_api_init', function(){
 
-	myapi_pick_ceil( 'http://localhost:3000/myapi/#/game', [
+	register_rest_route( 'myapi', '/game', [
 		'methods'  => 'GET',
-		'callback' => 'my_awesome_func',
+		'callback' => 'myapi_pick_ceil',
 	] );
 
 } );
