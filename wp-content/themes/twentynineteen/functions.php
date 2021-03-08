@@ -344,7 +344,6 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$user_id=['user_id'];
 	$selected_date=['selected_date'];
 	$type_prize=['type_prize'];
-	$connect=mysqli_connect("localhost","root","root","gameminer");
 
 	$wpdb->query( 'INSERT INTO $wpdb->usermeta
 			(`user_id`, `cell_number`, `selected_date`, `type_prize`)
