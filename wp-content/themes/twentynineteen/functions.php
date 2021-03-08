@@ -338,7 +338,18 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/block-patterns.php';
 
-function myapi_pick_ceil( WP_REST_Request $request ){
+function myapi_pick_ceil( WP_REST_Request $request ) {
+	global $wpdb;
+	$cell_number=['cell_number'];
+	$user_id=['user_id'];
+	$selected_date=['selected_date'];
+	$type_prize=['type_prize'];
+	$connect=mysqli_connect("localhost","root","root","gameminer");
+
+	$wpdb->query( 'INSERT INTO $wpdb->usermeta
+			(`user_id`, `cell_number`, `selected_date`, `type_prize`)
+			VALUES ( '". $user_id. "'. '" . $cell_number . "' . '" . $selected_date . "' . '" . $type_prize . "')' )
+	) );
 
 	$random = rand(1,10);
 
