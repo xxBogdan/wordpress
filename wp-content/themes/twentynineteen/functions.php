@@ -347,7 +347,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 
 	$wpdb->query( 'INSERT INTO $wpdb->gameminer
 			(`user_id`, `cell_number`, `selected_date`, `type_prize`)
-			VALUES ( '". $user_id. "'. '" . $cell_number . "' . '" . $selected_date . "' . '" . $type_prize . "')' )
+			VALUES ( '". $user_id . "'. '" . $cell_number . "' . '" . $selected_date . "' . '" . $type_prize . "')' )
 	) );
 
 	$random = rand(1,10);
