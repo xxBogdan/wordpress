@@ -340,14 +340,10 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 function myapi_pick_ceil( WP_REST_Request $request ) {
 	global $wpdb;
-	$cell_number=('321321');
-	$user_id=('3213');
-	$selected_date=('аываыв');
-	$type_prize=('2313');
-
-	$wpdb->query( $table_main="INSERT INTO `gameminer` (`user_id`, `cell_number`, `selected_date`, `type_prize`) VALUES ( '$user_id', '$cell_number', '$selected_date', '$type_prize' )" );
-
-	echo $table_main;
+	$cell_number=('16');
+	$user_id=('2');
+	$selected_date=('2021-03-05 21:11:15');
+	$type_prize=('1');
 
 	$table = $wpdb->get_results (
 		"
@@ -367,6 +363,10 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 			echo $cell_number;
 		}
 	}
+
+	$wpdb->query( $table_main="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
+
+	echo $table_main;
 
 	$random = rand(1,10);
 
