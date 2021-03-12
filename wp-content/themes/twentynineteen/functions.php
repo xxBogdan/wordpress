@@ -340,15 +340,33 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 function myapi_pick_ceil( WP_REST_Request $request ) {
 	global $wpdb;
-	$cell_number=['cell_number'];
-	$user_id=['user_id'];
-	$selected_date=['selected_date'];
-	$type_prize=['type_prize'];
+	$cell_number=('321321');
+	$user_id=('3213');
+	$selected_date=('аываыв');
+	$type_prize=('2313');
 
-	$wpdb->query( 'INSERT INTO $wpdb->gameminer
-			(`user_id`, `cell_number`, `selected_date`, `type_prize`)
-			VALUES ( '". $user_id . "'. '" . $cell_number . "' . '" . $selected_date . "' . '" . $type_prize . "')' )
-	) );
+	$wpdb->query( $table_main="INSERT INTO $wpdb->gameminer (`user_id`, `cell_number`, `selected_date`, `type_prize`) VALUES ( '$user_id', '$cell_number', '$selected_date', '$type_prize' )" );
+
+	echo $table_main;
+
+	$table = $wpdb->get_results (
+		"
+		SELECT selected_date, cell_number
+		FROM $wpdb->gameminer
+		WHERE cell_number between 1 and 25
+		AND selected_date > now() - interval 25 hours
+		"
+	);
+
+	if ( $table ) {
+		foreach ($table as $selected_date ) {
+			echo $selected_date;
+		}
+
+		foreach ($table as $cell_number ) {
+			echo $cell_number;
+		}
+	}
 
 	$random = rand(1,10);
 
