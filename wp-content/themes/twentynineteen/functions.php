@@ -345,21 +345,21 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$selected_date >= date("Y-m-d 00:00:00");
 	$type_prize=1;
 
-	$table = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number 'between 1 and 25' AND selected_date 'LIMIT 25'");
+	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number 'between 1 and 25' AND selected_date 'LIMIT 25'");
 
-	var_dump; if ( $table ) {
-		foreach ($table as $selected_date ) {
+	var_dump; if ( $result ) {
+		foreach ($result as $selected_date ) {
 			echo $selected_date;
 		}
 
-		foreach ($table as $cell_number ) {
+		foreach ($result as $cell_number ) {
 			echo $cell_number;
 		}
 	}
 
-	$wpdb->query( $table_main="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
+	$wpdb->query( $table="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
 
-	echo $table_main;
+	echo $table;
 
 	$random = rand(1,10);
 
