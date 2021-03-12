@@ -345,14 +345,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$selected_date=('2021-03-05 21:11:15');
 	$type_prize=('1');
 
-	$table = $wpdb->get_results (
-		"
-		SELECT selected_date, cell_number
-		FROM `gameminer`
-		WHERE cell_number between 1 and 25
-		AND selected_date > now() - interval 25 hours
-		"
-	);
+	$table = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > now() - interval 25 hours");
 
 	var_dump; if ( $table ) {
 		foreach ($table as $selected_date ) {
