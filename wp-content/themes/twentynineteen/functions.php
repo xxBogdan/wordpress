@@ -340,12 +340,12 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 function myapi_pick_ceil( WP_REST_Request $request ) {
 	global $wpdb;
-	$cell_number=('16');
-	$user_id=('2');
-	$selected_date=('2021-03-05 21:11:15');
-	$type_prize=('1');
+	$cell_number=16;
+	$user_id=2;
+	$selected_date='2021-03-05 21:11:15';
+	$type_prize=1;
 
-	$table = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > 'hours LIMIT 25'");
+	$table = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date LIMIT 25");
 
 	var_dump; if ( $table ) {
 		foreach ($table as $selected_date ) {
