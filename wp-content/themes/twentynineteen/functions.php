@@ -361,7 +361,11 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$rcount=count($result);
 
 	if ($rcount >= 3) {
-		return false;
+		$return = array (
+
+		);
+
+		return wp_send_json( $return );
 	}
 
 	if ($random >= 4 && $random < 8) {
@@ -382,7 +386,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$wpdb->query( $table="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
 
 	$return = array(
-		'result'   => '$result',
+		'result'   => $result,
 	);
 
 	wp_send_json( $return );
