@@ -343,9 +343,9 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$cell_number=16;
 	$user_id=1;
 	$selected_date=date("Y-m-d 00:00:00");
-	$type_prize=1;
+	$type_prize=$type_prize;
 
-	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND $selected_date >= date("Y-m-d 00:00:00")");
+	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND $selected_date > date('Y-m-d 00:00:00') AND $type_prize!=2");
 
 	var_dump ($result);
 
@@ -357,23 +357,26 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 		}
 	}
 
-	$wpdb->query( $table="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
-
 	echo $table;
 
 	$random = rand(1,10);
 
 	if ($random >= 4 && $random < 8) {
 		$result = "Вы выиграли!";
+		$type_prize=1;
 	}
 
 	else if ($random >= 8 && $random < 10) {
 		$result = "Вы получили дополнительную попытку!";
+		$type_prize=2;
 	}
 
 	else {
 		$result = "Вы проиграли.";
+		$type_prize=3;
 	}
+
+	$wpdb->query( $table="INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
 
 	$return = array(
 		'result'   => '$result',
