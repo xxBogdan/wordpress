@@ -342,12 +342,14 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	global $wpdb;
 	$cell_number=16;
 	$user_id=1;
-	$selected_date >= date("Y-m-d 00:00:00");
+	$selected_date=date("Y-m-d 00:00:00");
 	$type_prize=1;
 
-	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25");
+	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND $selected_date=date("Y-m-d 00:00:00")");
 
-	var_dump; if ( $result ) {
+	var_dump ($result);
+
+	if ( $result ) {
 		foreach ($result as $selected_date ) {
 			echo $selected_date;
 		} foreach ($result as $cell_number ) {
