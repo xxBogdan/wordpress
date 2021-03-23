@@ -376,7 +376,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 		$type_prize = 3;
 	}
 
-	$wpdb->query( "INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize')" );
+	$wpdb->query( "INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`, `result`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize', '$result')" );
 
 	$return = array(
 		'result'   => $type_prize,
