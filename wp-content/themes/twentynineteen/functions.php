@@ -357,8 +357,6 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 		return wp_send_json( $return );
 	}
 
-	var_dump ($result);
-
 	$random = rand(1,10);
 
 	if ($random >= 4 && $random < 8) {
