@@ -1,0 +1,217 @@
+@media all and (max-width:425px) {
+
+	/* Main pages */
+	.form-control {
+		width: 188px!important;
+		margin-top: 15px;
+	}
+
+	.btn-intake {
+		margin-top: 15px;
+	}
+
+	.btn-search-header {
+		margin-top: 15px;
+	}
+
+	.text-slogan-one {
+		font-size: 10pt!important;
+	}
+
+	.text-slogan-two {
+		font-size: 26pt!important;
+	}
+
+	.text-slogan-three {
+		font-size: 16pt!important;
+	}
+
+	h2 {
+		font-size: 14pt!important;
+	}
+
+	.signature {
+		font-size: 9pt!important;
+	}
+
+	.main-card {
+		margin-bottom: 20px;
+	}
+
+	.img-bg-one:hover {
+		transform: scale(1.04);
+	}
+	
+	.img-bg-two:hover {
+		transform: scale(1.04);
+	}
+	
+	.img-bg-three:hover {
+		transform: scale(1.04);
+	}
+
+	.all-goods
+	{
+		margin-bottom: 25px;
+	}
+
+	.all-goods-sale {
+		margin-bottom: 25px;
+	}
+
+	.features {
+		margin-top: 50px!important;
+	}
+
+	.feature {
+		margin-bottom: 20px;
+	}
+
+	.reviews-bg {
+		margin-top: 50px!important;
+	}
+
+	.help-adv {
+		width: 280px!important;
+	}
+
+	.cooperation {
+		margin-top: 50px!important;
+	}
+
+	.cooperation-firm {
+		margin-top: 5px;
+	}
+
+	.about {
+		margin-top: 50px!important;
+		margin-bottom: 50px!important;
+	}
+
+	.about-auxililary {
+		width: 250px;
+		height: 195px;
+		background-size: 250px;
+		margin-bottom: 25px;
+	}
+
+	.card {
+		width: 195px!important; 
+		height: 120px!important;
+		margin-bottom: 20px;
+		margin-left: 48px;
+	}
+
+	.carousel-control-prev-icon {
+		transform: scaleX(-1);
+	}
+
+	.carousel-control-next-icon {
+		transform: scaleX(-1);
+	}
+
+	.avatar_one {
+		width: 45px;
+		height: 45px;
+		background-size: 45px;
+		position: relative;
+		margin-bottom: 10px!important;
+	}
+
+	.card-buyer {
+		font-size: 8pt!important; 
+		bottom: 50px!important;
+		left: 5px;
+		position: relative;
+	}
+
+	.card-title-work {
+		font-size: 6pt!important; 
+		position: relative; 
+		bottom: 62px!important; 
+		left: 2px;
+	}
+
+	.card-rewievs {
+		font-size: 6pt!important; 
+		font-family: Mont Bold; 
+		float: left; 
+		text-align: left; 
+		position: relative;
+		margin-top: 10px!important;
+	}
+
+	.main-card {
+		height: 269px;
+	}
+	
+	.img-bg-one {
+		background-size: 350px;
+	}
+	
+	
+	.img-bg-two {
+		background-size: 350px;
+	}
+	
+	.img-bg-three {
+		background-size: 350px;
+	}
+
+	.contacts-hr {
+		width: 132px;
+	}
+
+	.info-hr {
+		width: 112px;
+	}
+
+	.menu-hr {
+		width: 50px;
+	}
+
+	hr {
+		width: 80px;
+	}
+
+	#arrowUp {
+		position: fixed;
+		bottom: 4%;
+		right: 10%;
+	}
+
+	/* About us */
+	.about-hr {
+		width: 162px;
+	}
+
+	/* Categories */
+	.categories-hr {
+		width: 203px;
+	}
+
+	.categories-sofa {
+		margin-right: 10px;
+	}
+
+	.categories-chairs {
+		margin-right: 10px;
+	}
+
+	.categories-nightstand {
+		margin-right: 10px;
+	}
+}
+
+@media all and (max-width: 1198px) {
+
+	.bi-gift-fill {
+		width: 8px;
+		height: 8px;
+	}
+
+	.bi-dot	{
+		width: 14px;
+		height: 14px;
+	}
+}

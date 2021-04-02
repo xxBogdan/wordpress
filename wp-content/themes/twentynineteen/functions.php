@@ -339,11 +339,14 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/block-patterns.php';
 
 function myapi_pick_ceil( WP_REST_Request $request ) {
+	
 	global $wpdb;
-	$cell_number = 16;
-	$user_id = 1;
+
+	$cell_number = $request['ceil_number'];
+	$user_id = $request['user_id'];
 	$selected_date = date("Y-m-d 00:00:00");
 	$type_prize = 0;
+	$message = data['MESSAGE'];
 
 	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > date('Y-m-d 00:00:00') AND type_prize!=2");
 

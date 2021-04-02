@@ -1,0 +1,317 @@
+.home a {
+    text-decoration: none;
+    color: #666666;
+    transition: 0.5s all;
+}
+
+.home a:hover {
+    color: #D58E32;
+    outline: none;
+    transition: 0.5s all;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.name-cs a{
+    font-size: 17pt; 
+    font-family: Mont Bold; 
+    color:#3A3D45; 
+    padding-left: 24px; 
+    padding-top: 15px;
+}
+
+.name-cs a:hover {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #3A3D45;
+}
+
+.categories-bedroom {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.categories-kitchen {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.categories-livingroom {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.categories-children {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.categories-hall {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.categories-office {
+    height: 330px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.img-cat-one {
+	background-image: url(images/categories/bedroom-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img-cat-two {
+	background-image: url(images/categories/livingroom-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img-cat-three {
+	background-image: url(images/categories/kitchen-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img-cat-four {
+	background-image: url(images/categories/children-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img-cat-five {
+	background-image: url(images/categories/hall-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img-cat-six {
+	background-image: url(images/categories/office-categories.png);
+	background-repeat: no-repeat;
+	height: 270px;
+	width: 100%;
+	background-size: 350px;
+	background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.categories-sofa {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-sofa:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-armchairs {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-armchairs:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-chairs {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-chairs:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-nightstand {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-nightstand:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-tables {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.categories-tables:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-wardrobe {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-wardrobe:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.categories-bar-sets {
+    height: 130px;
+    width: 130px;
+    background-color: #F5F4EF;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin-bottom: 30px;
+}
+
+.categories-bar-sets:hover {
+    background-color: #EBE9DF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.img-sofa {
+	background-image: url(images/categories/all-categories/icon-sofa.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-armchairs {
+	background-image: url(images/categories/all-categories/icon-armchair.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-chairs {
+	background-image: url(images/categories/all-categories/icon-chair.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-nightstand {
+	background-image: url(images/categories/all-categories/icon-nightstand.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-tables {
+	background-image: url(images/categories/all-categories/icon-table.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-wardrobe {
+	background-image: url(images/categories/all-categories/icon-wardrobe.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}
+
+.img-bar-sets {
+	background-image: url(images/categories/all-categories/icon-barset.svg);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 100%;
+	background-size: 70px;
+	background-position: center;
+}

@@ -1,0 +1,218 @@
+.form-send {
+    margin-top: 25px;
+    margin-bottom: 76px;
+    width: 220px;
+}
+
+.field {
+    width: 210px;
+    height: 35px;
+    margin-bottom: 10px;
+    border: 2px solid #D9DDE1;
+    font-family: Mont;
+    font-size: 10pt;
+    padding-left: 10px;
+    color: #666666;
+}
+
+.field:focus {
+    outline: none;
+}
+
+.field-phone {
+    width: 210px;
+    height: 35px;
+    border: 2px solid #D9DDE1;
+    font-family: Mont;
+    font-size: 10pt;
+    padding-left: 10px;
+    color: #666666;
+}
+
+.field-phone:focus {
+    outline: none;
+}
+
+.radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.radio + label {
+	position: relative;
+	padding: 0 0 0 28px;
+	cursor: pointer;
+	font-size: 10pt;
+	font-family: Mont;
+	color: #3A3D45;
+    margin-top: 10px;
+}
+
+.radio + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #CDD1DA;
+	border-radius: 50%;
+	background: #FFF;
+}
+
+.radio + label:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #D58E32;
+	opacity: 0;
+	transition: .2s all;
+}
+
+.radio:checked + label:after {
+	opacity: 1;
+}
+
+.radio:focus + label:before {
+	box-shadow: 0 0 0 2px rgba(211,215,224,.4);
+}
+
+.size-sale {
+	right: 4px;
+    bottom: 1px;
+	position: relative;
+}
+
+.discount-price {
+    width: 210px;
+    height: 35px;
+    margin-bottom: 14px;
+    border: 2px solid #D9DDE1;
+    font-family: Mont;
+    font-size: 10pt;
+    padding-left: 10px;
+    color: #666666;
+}
+
+.discount-price:focus {
+    outline: none;
+}
+
+.exit {
+    border: none;
+    background: none;
+    width: 35px;
+    height: 50px;
+    border-radius: 5px;
+    color: #151515;
+}
+
+.exit:focus {
+    outline: none;
+}
+
+.send-goods {
+    background-color: #151515;
+    color: white;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-family: Mont Bold;
+    font-size: 10pt;
+    transition: 0.3s all;
+    margin-top: 30px;
+}
+
+.send-goods:hover {
+    color: #D58E32;
+    background-color: #2a2a2a;
+}
+
+.send-goods:focus {
+    outline: none;
+}
+
+.bi {
+    color: white;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    transition: 0.3s all;
+}
+
+.bi:hover {
+    color: #D58E32;
+    cursor: pointer;
+}
+
+.send-users {
+    background-color: #151515;
+    color: white;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-family: Mont Bold;
+    font-size: 10pt;
+    transition: 0.3s all;
+    margin-top: 30px;
+}
+
+.send-users:hover {
+    color: #D58E32;
+    background-color: #2a2a2a;
+}
+
+.send-users:focus {
+    outline: none;
+}
+
+.input__wrapper {
+    width: 100%;
+    margin-top: 14px;
+}
+   
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+   
+.input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #fff;
+}
+   
+.input__file-button-text {
+    font-size: 10pt;
+    font-family: Mont;
+}
+   
+.input__file-button {
+    width: 200px;
+    height: 45px;
+    background: #D58E32;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Fonts */
+@font-face {
+	src: url("fonts/Mont-Regular.ttf");
+	font-family: "Mont";
+}
+
+@font-face {
+	src: url("fonts/Mont-Bold.ttf");
+	font-family: "Mont Bold";
+}
