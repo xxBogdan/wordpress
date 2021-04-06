@@ -348,13 +348,13 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$type_prize = 0;
 	$message = data['MESSAGE'];
 
-	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > date('Y-m-d 00:00:00') AND type_prize!=2");
+	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > date('Y-m-d 00:00:00') AND type_prize!=2 AND user_id = $user_id");
 
 	$rcount=count($result);
 
 	if ($rcount >= 3) {
 		$return = array (
-			'message' => "Вы проиграли",
+			'message' => "Вы проиграли!",
 			'type_prize' => 3
 		);
 		return wp_send_json( $return );
@@ -363,7 +363,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$random = rand(1,10);
 
 	if ($random >= 4 && $random < 8) {
-		$result = "Вы выиграли!";
+		$result = "Вы выиграли попробуйте еще раз!";
 		$type_prize = 1;
 	}
 
