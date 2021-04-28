@@ -14,6 +14,6 @@
 </head>
 <body>
 <div id="root"></div>
-<script type="text/javascript" src="<?php echo esc_url ( get_template_directory_uri() ); ?>/bp_build_reactjs/static/js/main.cf838536.js"></script>
+<script type="text/javascript" src="<?php echo esc_url ( get_template_directory_uri() ); ?>/bp_build_reactjs/static/js/main.8d93c0f1.js"></script>
 </body>
 </html>

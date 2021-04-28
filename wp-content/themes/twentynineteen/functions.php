@@ -346,7 +346,6 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$user_id = $request['user_id'];
 	$selected_date = date("Y-m-d 00:00:00");
 	$type_prize = 0;
-	$message = data['MESSAGE'];
 
 	$result = $wpdb->get_results ("SELECT selected_date, cell_number FROM `gameminer` WHERE cell_number between 1 and 25 AND selected_date > date('Y-m-d 00:00:00') AND type_prize!=2 AND user_id = $user_id");
 
@@ -380,7 +379,7 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 	$wpdb->query( "INSERT INTO `gameminer` (`cell_number`, `user_id`, `selected_date`, `type_prize`, `result`) VALUES ('$cell_number', '$user_id', '$selected_date', '$type_prize', '$result')" );
 
 	$return = array(
-		'result'   => $type_prize,
+		'type_prize'  => $type_prize,
 		'message'  => $result
 	);
 
@@ -389,8 +388,8 @@ function myapi_pick_ceil( WP_REST_Request $request ) {
 
 add_action( 'rest_api_init', function(){
 
-	register_rest_route( 'myapi', '/game', [
-		'methods'  => 'GET',
+	register_rest_route( 'myapi', 'game', [
+		'methods'  => 'POST',
 		'callback' => 'myapi_pick_ceil',
 	] );
 
